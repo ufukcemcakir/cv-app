@@ -3,7 +3,7 @@ import { useState } from 'react';
 const Summary = () => {
     const [isEditing, setIsEditing] = useState(false);
     const [contactInfo, setContactInfo] = useState({
-        desc: 'Ahmet Kaya',
+        desc: '',
     });
     const [tempInfo, setTempInfo] = useState(contactInfo);
 
@@ -37,7 +37,7 @@ const Summary = () => {
                     className='summary'
                     type="text"
                     name="name"
-                    value={tempInfo.name}
+                    value={tempInfo.desc}
                     onChange={handleChange}
                   />
                 </div>
@@ -51,7 +51,7 @@ const Summary = () => {
             ) : (
               <div>
                 <div>
-                  <p>{contactInfo.name}</p>
+                  <p>{contactInfo.desc}</p>
                 </div>
                 
                 <button
