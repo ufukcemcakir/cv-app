@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 20px;
+  padding: 20px;
+}
+
+.app > div {
+  background-color: #f1f1f1;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.app .summary {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  background-color: #e3e3e3;
+}
+
+.app .info {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+
+.app .languages {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.app .education {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+
+.app .experience {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.app .skills {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
