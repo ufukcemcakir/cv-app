@@ -62,6 +62,7 @@ function Exp({ expList, setExpList }) {
 
   return (
     <>
+    <h2>Education</h2>
       <button onClick={toggleModal} className="btn-modal">
         Add Education
       </button>

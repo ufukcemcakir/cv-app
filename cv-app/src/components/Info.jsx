@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import './common.css';
 
-const Info = () => {
+const Info = ({ onNameChange }) => {
     const [isEditing, setIsEditing] = useState(false);
     const [contactInfo, setContactInfo] = useState({
         name: 'Ahmet Kaya',
@@ -9,17 +9,15 @@ const Info = () => {
         phone: '123456789'
     });
     const [tempInfo, setTempInfo] = useState(contactInfo);
-
     const handleEdit = () => {
         setIsEditing(true);
         setTempInfo(contactInfo);
     };
-
     const handleSubmit = () => {
         setContactInfo(tempInfo);
+        onNameChange(tempInfo.name);
         setIsEditing(false);
     };
-
     const handleChange = (e) => {
         const { name, value } = e.target;
         setTempInfo(prev => ({
@@ -27,14 +25,13 @@ const Info = () => {
             [name]: value
         }));
     };
-
     return (
         <div>
           <div>
             <h2>Contact Information</h2>
-            
+           
             {isEditing ? (
-              <div>
+              <div className='contact-info'>
                 <div>
                   <label>Name</label>
                   <input
@@ -44,7 +41,7 @@ const Info = () => {
                     onChange={handleChange}
                   />
                 </div>
-                
+               
                 <div>
                   <label>Email</label>
                   <input
@@ -54,7 +51,7 @@ const Info = () => {
                     onChange={handleChange}
                   />
                 </div>
-                
+               
                 <div>
                   <label>Phone</label>
                   <input
@@ -64,7 +61,7 @@ const Info = () => {
                     onChange={handleChange}
                   />
                 </div>
-                
+               
                 <button
                   onClick={handleSubmit}
                 >
@@ -77,20 +74,19 @@ const Info = () => {
                   <span>Name:</span>
                   <p>{contactInfo.name}</p>
                 </div>
-                
+               
                 <div>
                   <span>Email:</span>
                   <p>{contactInfo.email}</p>
                 </div>
-                
+               
                 <div>
                   <span>Phone:</span>
                   <p>{contactInfo.phone}</p>
                 </div>
-                
+               
                 <button
                   onClick={handleEdit}
-
                 >
                   Edit
                 </button>
@@ -100,5 +96,4 @@ const Info = () => {
         </div>
       );
 };
-
 export default Info;

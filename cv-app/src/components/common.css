@@ -18,7 +18,7 @@
   }
   
   button {
-    background-color: #4CAF50;
+    background-color: #07041486;
     color: white;
     padding: 8px 16px;
     border: none;
@@ -28,5 +28,11 @@
   }
   
   button:hover {
-    background-color: #45a049;
+    background-color: #070414;
+  }
+
+  .contact-info{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
   }

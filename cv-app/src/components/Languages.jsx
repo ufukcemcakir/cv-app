@@ -62,6 +62,7 @@ function Lang({ langList, setLangList }) {
 
   return (
     <>
+    <h2>Languages</h2>
       <button onClick={toggleModal} className="btn-modal">
         Add Language
       </button>

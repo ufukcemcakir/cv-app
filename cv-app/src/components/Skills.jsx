@@ -24,6 +24,7 @@ function handleDelete(listId) {
     return (
         <div>
           <div>
+            <h2>Skills</h2>
             <input type='text' value={name} onChange={handleChange} />
             <button type='button' onClick={handleAdd}>
               Add
